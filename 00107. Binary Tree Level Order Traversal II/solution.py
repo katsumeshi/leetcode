@@ -20,10 +20,8 @@ class Solution(object):
             else:
                 arr[depth].append(root.val)
             
-            if root.left is not None:
-                self.dfs(root.left, depth+1, arr)
-            if root.right is not None:
-                self.dfs(root.right, depth+1, arr)
+            self.dfs(root.left, depth+1, arr)
+            self.dfs(root.right, depth+1, arr)
         
         return arr[::-1]
             
